@@ -52,7 +52,16 @@ repository settings.
 ## Support and community
 
 Use [Issues](https://github.com/Chrominskyy/devpulse-site/issues/new/choose) for
-bugs, feature requests and questions. Public pull requests are disabled.
+bugs, feature requests and questions. Public pull requests, Discussions, Wiki,
+Projects and commit comments are disabled.
+
+- [Contribution and support guidelines](CONTRIBUTING.md)
+- [Code of Conduct](CODE_OF_CONDUCT.md)
+- [Security policy and private vulnerability reporting](SECURITY.md)
+- [Copyright and licensing](LICENSE)
+
+Issues and attachments are public. Never post PATs, tokens, authorization headers,
+private organization/project details, pipeline logs or work-item content.
 
 ## Availability
 
