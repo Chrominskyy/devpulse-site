@@ -52,8 +52,9 @@ repository settings.
 ## Support and community
 
 Use [Issues](https://github.com/Chrominskyy/devpulse-site/issues/new/choose) for
-bugs, feature requests and questions. Public pull requests, Discussions, Wiki,
-Projects and commit comments are disabled.
+bugs, feature requests and questions. Pull requests require approval from @Chrominskyy before merging to the protected
+main branch. Discussions, Wiki, Projects and commit comments are disabled.
+The repository owner can bypass the branch rules for direct maintenance.
 
 - [Contribution and support guidelines](CONTRIBUTING.md)
 - [Code of Conduct](CODE_OF_CONDUCT.md)

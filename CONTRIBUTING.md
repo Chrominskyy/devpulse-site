@@ -1,6 +1,6 @@
 # Contributing and getting support
 
-This repository hosts the DevPulse product website and public support tracker. The application for macOS, iOS and iPadOS source is maintained separately. Public contributions are accepted as **issues**, not pull requests.
+This repository hosts the DevPulse product website and public support tracker. The application for macOS, iOS and iPadOS source is maintained separately. Use issues for bug reports, feature requests and support. Website or community-documentation changes may be proposed through pull requests; application source is maintained separately.
 
 ## Before opening an issue
 
@@ -23,9 +23,9 @@ Issues and attachments are public. Do not upload private documents, personal det
 
 ## Maintainer workflow
 
-Pull requests, Discussions, Wiki, Projects and commit comments are disabled. Maintainers review issues and may request more information, link duplicates, or close reports outside this repository's scope. No response-time guarantee is provided.
+Pull requests to main (and master, if created) require approval from @Chrominskyy, the code owner for all files. New commits dismiss stale approvals. The repository owner retains a bypass for direct maintenance. Discussions, Wiki, Projects and commit comments are disabled. Maintainers review issues and may request more information, link duplicates, or close reports outside this repository's scope. No response-time guarantee is provided.
 
-The pull request template is retained for maintainer use if pull requests are enabled in the future; it does not change the current contribution policy.
+Keep pull requests focused and include relevant verification. Changes to CODEOWNERS are subject to the same owner-review rule.
 
 ## Rights
 

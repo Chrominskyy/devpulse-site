@@ -1,6 +1,6 @@
-## Maintainer checklist
+## Pull request checklist
 
-Public pull requests are currently disabled. Please use an issue for bug reports, feature requests, or support. This template applies only if maintainers enable pull requests in the future.
+Use issues for bug reports, feature requests and support. Pull requests must concern this website or its community documentation and require @Chrominskyy's approval before merging to the protected main branch. The owner retains a bypass for direct maintenance.
 
 ### Purpose
 
