@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Privacy | DevPulse</title>
+<meta name="description" content="How DevPulse handles your credentials, your Azure DevOps data, iCloud settings, and this website.">
+<link rel="canonical" href="https://chrominskyy.github.io/devpulse-site/privacy.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Privacy | DevPulse">
+<meta property="og:description" content="How DevPulse handles your credentials, your Azure DevOps data, iCloud settings, and this website.">
+<meta property="og:url" content="https://chrominskyy.github.io/devpulse-site/privacy.html">
+<meta property="og:image" content="https://chrominskyy.github.io/devpulse-site/assets/app-pipelines.jpg">
+<link rel="icon" type="image/png" href="assets/icon-180.png">
+<link rel="apple-touch-icon" href="assets/icon-180.png">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="./">
+      <img src="assets/icon-180.png" alt="" width="32" height="32">
+      <span>DevPulse</span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="./#pipelines">Pipelines</a>
+      <a href="./#work-items">Work Items</a>
+      <a href="./#widgets">Widgets</a>
+      <a href="support.html">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<div class="wrap document">
+
+  <p class="kicker">Privacy policy</p>
+  <h1>Your organization<br>stays yours.</h1>
+  <p class="lead">DevPulse connects to the Azure DevOps organization you choose. It has no developer-operated backend.</p>
+  <p class="updated">Effective date: October 21, 2026</p>
+
+  <section>
+    <h2>About this policy</h2>
+    <p>This policy describes DevPulse, an Azure DevOps Services client for macOS, iOS and iPadOS developed by Chrominsky (Bartosz Chrominski), and this product website.</p>
+  </section>
+
+  <section>
+    <h2>Connections to Microsoft</h2>
+    <p>DevPulse connects directly to the Azure DevOps Services organization you select, and sends the authenticated requests needed to retrieve projects, pipelines, execution data, logs and work items. Saving a work item or uploading an attachment sends that content to your organization. Microsoft processes these requests under its own terms and privacy practices.</p>
+    <p>Microsoft Entra authentication uses Microsoft's MSAL SDK and the system sign-in. The MSAL 2.16.0 source privacy manifest declares name, email address, other contact information, customer support content, user identifiers, device identifiers, other diagnostic data and phone number for app functionality. All are declared as not used for tracking. DevPulse also sends work item fields, attachment content and relationship changes that you explicitly save to your selected organization.</p>
+    <p>DevPulse has no developer-operated application backend, advertising integration, or analytics SDK. That does not mean that Microsoft or Apple collects no data.</p>
+  </section>
+
+  <section>
+    <h2>Credentials on your device</h2>
+    <p>Personal access tokens are stored in the macOS Keychain, scoped to one organization. Microsoft Entra tokens are managed by MSAL's own Keychain cache. Local preferences hold your connection configuration, selections and filters. The app does not keep pipeline history or task logs as an offline database, and downloaded or exported files are saved only when you choose to save them.</p>
+    <p><strong>Sign Out</strong> removes this app's local authentication and restoration state. It does not revoke a personal access token at Microsoft, and it does not sign you out of your web browser. Revoke a token in Azure DevOps when it should no longer be usable. Azure DevOps organization data is managed by that organization's own policies.</p>
+  </section>
+
+  <section>
+    <h2>The desktop widget</h2>
+    <p>Widgets read a bounded display cache in the app's shared container. The cache holds pipeline and run identifiers, display names, status, stage names and timestamps. It contains no credentials and no task log content. It stays available after the app quits, and its age is displayed visibly.</p>
+  </section>
+
+  <section>
+    <h2>iCloud settings</h2>
+    <p>When iCloud settings are available, selected preferences, scoped pins, Work Items defaults, and your organization and project choices use Apple's iCloud key-value storage for your Apple Account. Credentials, the widget cache, loaded API results and editor drafts are not included. Synchronization depends on your Apple Account, your iCloud settings, and Apple's service availability.</p>
+    <p>You can manage Apple Account and iCloud settings through the operating system.</p>
+  </section>
+
+  <section>
+    <h2>This website</h2>
+    <p>This is a static website hosted on GitHub Pages. It uses no analytics, no advertising, no cookies, no contact forms, and no third-party font services. Fonts and images are served from this domain. GitHub may process technical information, including IP addresses, to provide and secure its hosting service. See the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub General Privacy Statement</a>.</p>
+  </section>
+
+  <section>
+    <h2>Support and contact</h2>
+    <p>For support and privacy questions, use the <a href="https://github.com/Chrominskyy/devpulse-site/issues/new/choose">GitHub issue forms</a> for this repository. If you contact us through GitHub Issues, we can see the information you submit, and GitHub processes that information under its own policies. Issues are public, so do not post private documents or sensitive personal information.</p>
+  </section>
+
+  <section>
+    <h2>Changes</h2>
+    <p>If the product's data practices change, this policy will be updated with a new effective date.</p>
+  </section>
+
+</div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <a class="brand" href="./">
+      <img src="assets/icon-180.png" alt="" width="28" height="28">
+      <span>DevPulse</span>
+    </a>
+    <p>Independent Azure DevOps client for Apple platforms. Not affiliated with or endorsed by Microsoft.</p>
+    <nav aria-label="Footer navigation">
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="https://github.com/Chrominskyy/devpulse-site">GitHub</a>
+    </nav>
+    <p class="copyright">© 2026 Chrominsky</p>
+  </div>
+</footer>
+
+</body>
+</html>

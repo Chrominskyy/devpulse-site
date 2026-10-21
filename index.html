@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>DevPulse | Azure DevOps for your Mac</title>
+<meta name="description" content="DevPulse is a native Azure DevOps client for macOS, iOS and iPadOS. Follow pipeline runs, read stage logs, and work with boards and work items.">
+<link rel="canonical" href="https://chrominskyy.github.io/devpulse-site/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="DevPulse | Azure DevOps for your Mac">
+<meta property="og:description" content="A native Azure DevOps client for macOS, iOS and iPadOS. Follow pipeline runs, read stage logs, and work with boards and work items.">
+<meta property="og:url" content="https://chrominskyy.github.io/devpulse-site/">
+<meta property="og:image" content="https://chrominskyy.github.io/devpulse-site/assets/app-pipelines.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="assets/icon-180.png">
+<link rel="apple-touch-icon" href="assets/icon-180.png">
+<link rel="preload" href="assets/fonts/geist.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/jetbrains-mono.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="./">
+      <img src="assets/icon-180.png" alt="" width="32" height="32">
+      <span>DevPulse</span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="#pipelines">Pipelines</a>
+      <a href="#work-items">Work Items</a>
+      <a href="#widgets">Widgets</a>
+      <a href="support.html">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero wrap">
+    <div class="hero-copy">
+      <p class="kicker">Azure DevOps Services, native on Apple platforms</p>
+      <h1>Your pipelines,<br>out of the browser.</h1>
+      <p class="lede">Follow runs, read stage logs, and work through boards and work items in a native app built for macOS, iPhone and iPad.</p>
+      <div class="hero-actions">
+        <a class="button" href="#pipelines">See the interface <span aria-hidden="true">→</span></a>
+        <a class="button ghost" href="support.html">Get started</a>
+      </div>
+    </div>
+    <div class="hero-shot">
+      <picture>
+        <source srcset="assets/app-pipelines.webp" type="image/webp">
+        <img src="assets/app-pipelines.jpg" width="1280" height="800" alt="DevPulse showing the Pipelines module: a folder sidebar, a list of recent runs, and an execution graph of the selected run." fetchpriority="high" decoding="async">
+      </picture>
+    </div>
+  </section>
+
+  <section class="signal" aria-label="What DevPulse connects to">
+    <div class="wrap signal-inner">
+      <p class="signal-label">Connects directly to</p>
+      <ul class="signal-list">
+        <li>Azure DevOps Services</li>
+        <li>Microsoft Entra ID</li>
+        <li>Personal access tokens</li>
+        <li>iCloud Key-Value Store</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section wrap reveal" id="pipelines" aria-labelledby="pipelines-title">
+    <div class="section-head">
+      <h2 id="pipelines-title">Every run, as a graph</h2>
+      <p>DevPulse reads the build timeline and draws it as stages, jobs and tasks. Stage order follows the compiled YAML of that exact run, so parallel branches sit side by side the way they executed.</p>
+    </div>
+
+    <div class="panel">
+      <div class="panel-copy">
+        <h3>Cards or ASCII, your call</h3>
+        <p>Switch between a card graph and a text graph without leaving the run. The ASCII view keeps the same hierarchy and the same status colors, with markers for succeeded, running, failed and not started.</p>
+        <ul class="ticks">
+          <li>Stage, Job, Task, Phase and Checkpoint visibility controls</li>
+          <li>Vertical and Horizontal layouts</li>
+          <li>Expand All and Collapse All across the whole run</li>
+        </ul>
+      </div>
+      <figure class="panel-figure">
+        <picture>
+          <source srcset="assets/app-ascii.webp" type="image/webp">
+          <img src="assets/app-ascii.jpg" width="640" height="420" alt="The ASCII execution graph of a DevPulse run, listing Build, Test and Deploy stages with their tasks and status markers." loading="lazy" decoding="async">
+        </picture>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section wrap reveal" id="work-items" aria-labelledby="work-items-title">
+    <div class="section-head">
+      <h2 id="work-items-title">Boards you can edit</h2>
+      <p>Browse a team board or a flat list of work items, filter by person, type and state, and open an item in its own window. Saving is always explicit, and Azure DevOps rules stay authoritative.</p>
+    </div>
+
+    <div class="panel reverse">
+      <div class="panel-copy">
+        <h3>A real editor, not a viewer</h3>
+        <p>Edit fields, state and assignment, upload attachments, and stage relationship changes. Every save checks the baseline revision, so a conflicting change is caught before it overwrites someone else's work.</p>
+        <ul class="ticks">
+          <li>Independent detail and editor windows</li>
+          <li>Attachments up to 40 MB</li>
+          <li>Grouped Closed items in their own snapshot window</li>
+        </ul>
+      </div>
+      <figure class="panel-figure">
+        <picture>
+          <source srcset="assets/app-work-items.webp" type="image/webp">
+          <img src="assets/app-work-items.jpg" width="940" height="420" alt="The Work Items board in DevPulse, with New, Active, Review and Closed columns holding work item cards." loading="lazy" decoding="async">
+        </picture>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section wrap reveal" id="widgets" aria-labelledby="widgets-title">
+    <div class="section-head">
+      <h2 id="widgets-title">Status on your desktop</h2>
+      <p>Track the pipeline you care about, or pin up to six exact runs, and read them without opening the app. The widget shows the current stage and how old the cached data is.</p>
+    </div>
+
+    <div class="widget-row">
+      <figure class="widget-figure">
+        <picture>
+          <source srcset="assets/widget-runs.webp" type="image/webp">
+          <img src="assets/widget-runs.jpg" width="658" height="690" alt="The DevPulse Pipeline Runs desktop widget showing four tracked runs with their status, current stage and last update time." loading="lazy" decoding="async">
+        </picture>
+        <figcaption>Pipeline Runs widget, tracking four exact executions.</figcaption>
+      </figure>
+      <figure class="widget-figure">
+        <picture>
+          <source srcset="assets/widget-status.webp" type="image/webp">
+          <img src="assets/widget-status.jpg" width="658" height="310" alt="The DevPulse Pipeline Status desktop widget showing the latest run of a selected pipeline." loading="lazy" decoding="async">
+        </picture>
+        <figcaption>Pipeline Status widget for a single pipeline.</figcaption>
+      </figure>
+      <div class="widget-notes">
+        <h3>Updates while the app runs</h3>
+        <p>DevPulse refreshes selected runs in the background, even with every window closed. The widget extension only reads a small display cache. It never receives credentials, and it makes no network requests of its own.</p>
+        <p>WidgetKit decides when the desktop actually redraws, so the refresh interval is not a guarantee of a visible change.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section wrap reveal" id="security" aria-labelledby="security-title">
+    <div class="section-head">
+      <h2 id="security-title">Your credentials stay put</h2>
+      <p>DevPulse talks to your Azure DevOps organization and to Apple's services. It has no developer-operated backend, no analytics, and no advertising SDK.</p>
+    </div>
+
+    <div class="grid-3">
+      <article class="tile">
+        <svg class="tile-icon" viewBox="0 0 256 256" aria-hidden="true" fill="currentColor"><path d="M128,112a28,28,0,0,0-8,54.83V184a8,8,0,0,0,16,0V166.83A28,28,0,0,0,128,112Zm0,40a12,12,0,1,1,12-12A12,12,0,0,1,128,152Zm80-72H176V56a48,48,0,0,0-96,0V80H48A16,16,0,0,0,32,96V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V96A16,16,0,0,0,208,80ZM96,56a32,32,0,0,1,64,0V80H96ZM208,208H48V96H208V208Z"/></svg>
+        <h3>Keychain storage</h3>
+        <p>Personal access tokens are kept in the macOS Keychain, scoped to one organization. Entra tokens stay in MSAL's own Keychain cache.</p>
+      </article>
+      <article class="tile">
+        <svg class="tile-icon" viewBox="0 0 256 256" aria-hidden="true" fill="currentColor"><path d="M200,112a8,8,0,0,1-8,8H152a8,8,0,0,1,0-16h40A8,8,0,0,1,200,112Zm-8,24H152a8,8,0,0,0,0,16h40a8,8,0,0,0,0-16Zm40-80V200a16,16,0,0,1-16,16H40a16,16,0,0,1-16-16V56A16,16,0,0,1,40,40H216A16,16,0,0,1,232,56ZM216,200V56H40V200H216Zm-80.26-34a8,8,0,1,1-15.5,4c-2.63-10.26-13.06-18-24.25-18s-21.61,7.74-24.25,18a8,8,0,1,1-15.5-4,39.84,39.84,0,0,1,17.19-23.34,32,32,0,1,1,45.12,0A39.76,39.76,0,0,1,135.75,166ZM96,136a16,16,0,1,0-16-16A16,16,0,0,0,96,136Z"/></svg>
+        <h3>Native sign-in</h3>
+        <p>Microsoft Entra sign-in uses the system authentication session. DevPulse never reads browser cookies or reuses the Azure DevOps web client's session.</p>
+      </article>
+      <article class="tile">
+        <svg class="tile-icon" viewBox="0 0 256 256" aria-hidden="true" fill="currentColor"><path d="M240,208H224V96a16,16,0,0,0-16-16H144V32a16,16,0,0,0-24.88-13.32L39.12,72A16,16,0,0,0,32,85.34V208H16a8,8,0,0,0,0,16H240a8,8,0,0,0,0-16ZM208,96V208H144V96ZM48,85.34,128,32V208H48ZM112,112v16a8,8,0,0,1-16,0V112a8,8,0,1,1,16,0Zm-32,0v16a8,8,0,0,1-16,0V112a8,8,0,1,1,16,0Zm0,56v16a8,8,0,0,1-16,0V168a8,8,0,1,1,16,0Zm32,0v16a8,8,0,0,1-16,0V168a8,8,0,1,1,16,0Z"/></svg>
+        <h3>Your own organization</h3>
+        <p>A personal access token is never reused across organizations. Switching organization invalidates the old browsing identity and rechecks access with local credentials only.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section wrap reveal" id="platforms" aria-labelledby="platforms-title">
+    <div class="section-head">
+      <h2 id="platforms-title">One codebase, three platforms</h2>
+      <p>DevPulse is written in Swift with SwiftUI, targeting macOS 27, iOS 27 and iPadOS 27. The same graph, the same boards, the same editor.</p>
+    </div>
+
+    <ul class="platform-list">
+      <li>
+        <span class="platform-name">macOS</span>
+        <span class="platform-detail">Multiple windows, a menu bar presence, desktop widgets, and background refresh while the app runs.</span>
+      </li>
+      <li>
+        <span class="platform-name">iPhone</span>
+        <span class="platform-detail">A fixed top bar switches between Pipelines and Work Items, with boards and editors in their own sheets.</span>
+      </li>
+      <li>
+        <span class="platform-name">iPad</span>
+        <span class="platform-detail">Split layouts, a resizable sidebar, and a full-screen run graph that keeps the selected pipeline.</span>
+      </li>
+    </ul>
+  </section>
+
+  <section class="section wrap reveal" id="availability" aria-labelledby="availability-title">
+    <div class="availability">
+      <div>
+        <h2 id="availability-title">Getting DevPulse</h2>
+        <p>DevPulse is being prepared for the Mac App Store and is not yet publicly available there. The macOS build requires an Apple Silicon Mac running macOS 27 or later, an Azure DevOps Services organization, and internet access.</p>
+        <p class="availability-note">Microsoft Entra sign-in needs an application registration. A personal access token works without one, and is the quickest way to try the app.</p>
+      </div>
+      <div class="availability-actions">
+        <a class="button" href="support.html">Read the setup guide <span aria-hidden="true">→</span></a>
+        <a class="button ghost" href="https://github.com/Chrominskyy/psychic-giggle">Source on GitHub</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <a class="brand" href="./">
+      <img src="assets/icon-180.png" alt="" width="28" height="28">
+      <span>DevPulse</span>
+    </a>
+    <p>Independent Azure DevOps client for Apple platforms. Not affiliated with or endorsed by Microsoft.</p>
+    <nav aria-label="Footer navigation">
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="https://github.com/Chrominskyy/devpulse-site">GitHub</a>
+    </nav>
+    <p class="copyright">© 2026 Chrominsky</p>
+  </div>
+</footer>
+
+</body>
+</html>

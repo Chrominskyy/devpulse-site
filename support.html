@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Support | DevPulse</title>
+<meta name="description" content="Set up DevPulse, connect an Azure DevOps organization, read stage logs, and troubleshoot common problems.">
+<link rel="canonical" href="https://chrominskyy.github.io/devpulse-site/support.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Support | DevPulse">
+<meta property="og:description" content="Set up DevPulse, connect an Azure DevOps organization, read stage logs, and troubleshoot common problems.">
+<meta property="og:url" content="https://chrominskyy.github.io/devpulse-site/support.html">
+<meta property="og:image" content="https://chrominskyy.github.io/devpulse-site/assets/app-pipelines.jpg">
+<link rel="icon" type="image/png" href="assets/icon-180.png">
+<link rel="apple-touch-icon" href="assets/icon-180.png">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="./">
+      <img src="assets/icon-180.png" alt="" width="32" height="32">
+      <span>DevPulse</span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="./#pipelines">Pipelines</a>
+      <a href="./#work-items">Work Items</a>
+      <a href="./#widgets">Widgets</a>
+      <a href="support.html">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<div class="wrap document">
+
+  <p class="kicker">DevPulse support</p>
+  <h1>Get connected,<br>then keep working.</h1>
+  <p class="lead">Setup steps, the permissions DevPulse needs, and what to check when something looks wrong.</p>
+
+  <section>
+    <h2>Requirements</h2>
+    <ul>
+      <li>An Apple Silicon Mac running macOS 27 or later for the macOS app. The iPhone and iPad apps require iOS 27 or iPadOS 27.</li>
+      <li>An Azure DevOps Services organization. Azure DevOps Server is not supported.</li>
+      <li>Internet access, and permission to view the project you select.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Connect an organization</h2>
+    <p>DevPulse supports two ways of authenticating. The personal access token route needs no setup on Microsoft's side, so it is the fastest way to try the app.</p>
+
+    <h3>With a personal access token</h3>
+    <ol>
+      <li>Open <strong>Settings &gt; Connection</strong>.</li>
+      <li>Choose <strong>Personal access token</strong>, enter your organization name and the token, then <strong>Save</strong>.</li>
+      <li>DevPulse checks access and lists your projects. Select the project to work in.</li>
+    </ol>
+    <p>The token needs these scopes:</p>
+    <table>
+      <caption>Personal access token scopes</caption>
+      <thead>
+        <tr><th scope="col">Scope</th><th scope="col">Needed for</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Build (Read)</td><td>Pipeline folders, definitions, runs and stage logs</td></tr>
+        <tr><td>Project and Team (Read)</td><td>Listing projects, teams and boards</td></tr>
+        <tr><td>Work Items (Read)</td><td>Browsing work items and boards</td></tr>
+        <tr><td>Work Items (Read &amp; Write)</td><td>Saving edits, attachments and relationships. Only needed for editing.</td></tr>
+      </tbody>
+    </table>
+    <p>Do not grant write access just to monitor pipelines. A read-only connection stays useful, and DevPulse never upgrades a credential on its own.</p>
+
+    <h3>With Microsoft Entra ID</h3>
+    <p>Entra sign-in needs an application registration, which is a one-time setup for whoever distributes the app. Register a <strong>Mobile and desktop applications</strong> platform with the redirect URI <code>msauth.dev.psychicgiggle.PipelineMonitor://auth</code>, and add the delegated Azure DevOps permissions <code>vso.profile</code>, <code>vso.build</code> and <code>vso.work</code>. Add <code>vso.work_write</code> only if you want editing.</p>
+    <p>There is no client secret and no confidential client. DevPulse cannot discover an existing app registration, and it never reads browser cookies or reuses the Azure DevOps web client's session.</p>
+  </section>
+
+  <section>
+    <h2>Reading a run</h2>
+    <ul>
+      <li>Pick a pipeline in the sidebar, then a run in <strong>Recent Runs</strong>. The execution graph appears in the inspector.</li>
+      <li>Stage order follows the compiled YAML of that exact run, so parallel branches are placed the way they executed. If the definition cannot be read, the graph falls back to timeline order and says so.</li>
+      <li>Only stages that have a log expose <strong>Open Logs</strong>. Log windows are independent, so you can keep one open while you look at something else.</li>
+      <li>Logs load in chunks of 500 lines. <strong>Load More Lines</strong> continues from the current offset, and <strong>Check for New Lines</strong> reads from where you left off.</li>
+      <li><strong>Auto Refresh</strong> checks every 30 seconds while the window is active and pauses in the background.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Work items</h2>
+    <ul>
+      <li>In <strong>Work Items</strong>, choose a team, then a board or <strong>All Work Items</strong>.</li>
+      <li>Filters for people, types and states run on the server. <strong>Clear Filters</strong> restores the selected scope.</li>
+      <li>Search matches part of a title, or an exact ID written as <code>12345</code> or <code>#12345</code>.</li>
+      <li>Editing is always explicit. <strong>Save</strong> checks the baseline revision first, so a conflict is reported before anything is overwritten.</li>
+      <li>Board counts describe what has been loaded, not the whole board. Use the paging controls, including <strong>Load Terminal Items</strong>, to read further.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Widgets</h2>
+    <p>Right-click a pipeline and choose <strong>Show in Desktop Widget</strong> for the single-pipeline status widget, or right-click an entry in <strong>Recent Runs</strong> and choose <strong>Add Run to Large Widget</strong> to track up to six exact executions.</p>
+    <p>Add the widget through the desktop's <strong>Edit Widgets</strong> menu. The app refreshes selected runs while it is running, including with every window closed. WidgetKit decides when the desktop actually redraws, so the refresh interval is not a guarantee of a visible change. The cached age is shown on the widget, and a widget reading stale data is marked <strong>Cached</strong>.</p>
+  </section>
+
+  <section>
+    <h2>iCloud settings</h2>
+    <p>Selected preferences, scoped pins, Work Items defaults, and your organization and project choice can synchronize through your Apple Account. Credentials, MSAL tokens, widget data, window state, loaded results and editor drafts stay on the device.</p>
+    <p>Synchronization depends on your Apple Account and Apple's service availability. Saving locally does not confirm that another device has received the change, and there is no guaranteed delivery interval. Failures are reported in <strong>Settings &gt; Connection &gt; iCloud Settings</strong>, where <strong>Retry Local Changes</strong> sends them explicitly.</p>
+  </section>
+
+  <section>
+    <h2>Common problems</h2>
+
+    <h3>Authentication failed</h3>
+    <p>Check the organization name, the token expiry and the scopes. Never send a token to a support request.</p>
+
+    <h3>Permission denied</h3>
+    <p>Ask your organization's administrator to confirm project and area access. Refreshing does not change permissions, and DevPulse cannot grant them.</p>
+
+    <h3>The widget shows old data</h3>
+    <p>Keep DevPulse running, confirm the connection, and use <strong>Refresh Runs</strong> in the widget settings. The widget displays the age of its cache, and the operating system decides when to redraw it.</p>
+
+    <h3>A save was rejected</h3>
+    <p>Your draft is kept. Reload the work item explicitly, then reapply the change and save again. Azure DevOps rules and field permissions remain authoritative.</p>
+
+    <h3>The board looks incomplete</h3>
+    <p>Loaded counts and notices on the board describe the current read. Use the paging controls to extend it. Treat loaded counts as a snapshot, never as the complete server result.</p>
+  </section>
+
+  <section>
+    <h2>Report a problem</h2>
+    <p>Use <a href="https://github.com/Chrominskyy/devpulse-site/issues/new">the GitHub issue form</a> for bugs, feature requests and support questions. A GitHub account is required, and issues are public.</p>
+    <p>Include the app version, your macOS, iOS or iPadOS version, what you did, and what happened instead. A small example with non-sensitive data helps. Never include a personal access token, an access token, an authorization header, private task logs, or unredacted organization data.</p>
+    <p>For a security concern, use GitHub's private vulnerability reporting for this repository instead of a public issue.</p>
+  </section>
+
+</div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <a class="brand" href="./">
+      <img src="assets/icon-180.png" alt="" width="28" height="28">
+      <span>DevPulse</span>
+    </a>
+    <p>Independent Azure DevOps client for Apple platforms. Not affiliated with or endorsed by Microsoft.</p>
+    <nav aria-label="Footer navigation">
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="https://github.com/Chrominskyy/devpulse-site">GitHub</a>
+    </nav>
+    <p class="copyright">© 2026 Chrominsky</p>
+  </div>
+</footer>
+
+</body>
+</html>
