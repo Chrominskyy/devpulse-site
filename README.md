@@ -64,6 +64,12 @@ The repository owner can bypass the branch rules for direct maintenance.
 Issues and attachments are public. Never post PATs, tokens, authorization headers,
 private organization/project details, pipeline logs or work-item content.
 
+## iPhone Duo
+
+The iOS app includes an unfolded iPhone Duo layout. Work Items browsing and item
+details were verified on the iOS 27.1 simulator with PAT authentication. This is
+simulator verification, not physical-device validation.
+
 ## Availability
 
 DevPulse is being prepared for the Mac App Store and is not yet publicly
