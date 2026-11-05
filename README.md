@@ -1,8 +1,7 @@
 # DevPulse website
 
 Public product website for DevPulse, an Azure DevOps client for macOS, iOS and
-iPadOS. The application source is maintained separately in
-[Chrominskyy/psychic-giggle](https://github.com/Chrominskyy/psychic-giggle).
+iPadOS. The application source is maintained separately in a private repository.
 
 Hosted at https://chrominskyy.github.io/devpulse-site/ using GitHub Pages.
 
