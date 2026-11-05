@@ -23,11 +23,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Check site
+        run: python3 scripts/check_site.py
+
       # Stage only the published files, so the artifact never contains .git.
       - name: Stage site
         run: |
           mkdir -p _site
-          cp -R index.html support.html privacy.html robots.txt sitemap.xml LICENSE README.md assets _site/
+          cp -R index.html support.html privacy.html robots.txt sitemap.xml LICENSE README.md assets _old _site/
           touch _site/.nojekyll
 
       - uses: actions/configure-pages@v5

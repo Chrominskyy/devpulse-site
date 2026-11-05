@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /devpulse-site/_old/
 
 Sitemap: https://chrominskyy.github.io/devpulse-site/sitemap.xml
