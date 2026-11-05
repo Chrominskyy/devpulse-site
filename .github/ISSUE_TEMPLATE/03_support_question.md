@@ -20,7 +20,7 @@ Mention relevant steps from the support guide and what happened.
 
 ## Before submitting
 
-- [ ] I read https://chrominskyy.github.io/devpulse-site/support.html and searched existing issues.
+- [ ] I read https://devpulse.chrominsky.dev/support.html and searched existing issues.
 - [ ] This question contains no private documents, personal details, passwords, PATs, access tokens, authorization headers, or unredacted pipeline logs.
 
 For conduct concerns, request a private moderation contact without posting identities or incident details. For security vulnerabilities, use the private reporting link in SECURITY.md.
