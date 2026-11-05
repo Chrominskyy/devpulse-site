@@ -1,0 +1,31 @@
+# Third-party notices
+
+This website includes the following third-party materials.
+
+## Geist
+
+Copyright (c) 2020 Vercel, Inc.
+
+Geist is licensed under the SIL Open Font License, Version 1.1.
+<https://github.com/vercel/geist-font>
+
+## JetBrains Mono
+
+Copyright (c) 2000-2024 JetBrains s.r.o.
+
+JetBrains Mono is licensed under the SIL Open Font License, Version 1.1.
+<https://github.com/JetBrains/JetBrainsMono>
+
+## Phosphor Icons
+
+Copyright (c) 2021 Phosphor Icons
+
+Phosphor Icons is licensed under the MIT License.
+<https://github.com/phosphor-icons/core>
+
+---
+
+The DevPulse application is an independent product. It is not affiliated with,
+endorsed by, or sponsored by Microsoft. Microsoft Entra ID, Microsoft Azure
+DevOps Services, Azure DevOps, and Windows are trademarks of the Microsoft
+group of companies.
