@@ -3,7 +3,7 @@
 Public product website for DevPulse, an Azure DevOps client for macOS, iOS and
 iPadOS. The application source is maintained separately in a private repository.
 
-Hosted at https://chrominskyy.github.io/devpulse-site/ using GitHub Pages.
+Hosted at https://devpulse.chrominsky.dev/ using GitHub Pages.
 
 This site uses plain HTML, CSS and a few lines of optional JavaScript, with local
 assets and no build step, analytics, tracking, cookies or third-party font services.

@@ -4,7 +4,7 @@ This repository hosts the DevPulse product website and public support tracker. T
 
 ## Before opening an issue
 
-- Read the [support guide](https://chrominskyy.github.io/devpulse-site/support.html) and search existing issues.
+- Read the [support guide](https://devpulse.chrominsky.dev/support.html) and search existing issues.
 - Choose the bug report, feature request, or support question template.
 - Write in English or Polish. Use one issue per problem or request.
 - Follow the [Code of Conduct](CODE_OF_CONDUCT.md).
