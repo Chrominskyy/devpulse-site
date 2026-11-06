@@ -177,4 +177,17 @@ check_404(ROOT, BASE_URL)
 for path, page in pages.items():
     check_local_asset(ROOT, BASE_URL, page.meta["og:image"], path.name)
 
+
+def check_favicon_ico(root):
+    """Browsers and crawlers request /favicon.ico by default; serve a real ICO there."""
+    path = root / "favicon.ico"
+    assert path.is_file(), "Missing favicon.ico in the site root"
+    assert path.read_bytes()[:4] == b"\x00\x00\x01\x00", "favicon.ico is not an ICO file"
+    workflow = (root / ".github/workflows/pages.yml").read_text()
+    for name in ("404.html", "favicon.ico"):
+        assert re.search(rf"cp -R[^\n]*\b{re.escape(name)}\b", workflow), f"{name} missing from the deploy copy list"
+
+
+check_favicon_ico(ROOT)
+
 print(f"Passed (strict): {len(pages)} pages, {len(old_pages)} backup pages, local assets, links, anchors and basic semantics")
