@@ -92,6 +92,8 @@ for path, page in pages.items():
     assert page.h1 == 1, f"Expected one main heading: {path}"
     assert page.title.strip(), f"Missing title: {path}"
     assert page.meta.get("description", "").strip(), f"Missing meta description: {path}"
+    # Bing Webmaster Tools reports descriptions outside 25-160 characters as an error.
+    assert 25 <= len(page.meta["description"]) <= 160, f"Meta description length {len(page.meta['description'])}, expected 25-160: {path}"
     expected = BASE_URL if path.name == "index.html" else BASE_URL + path.name
     assert page.canonical == expected, f"Wrong canonical: {path}: {page.canonical}"
     assert page.meta.get("og:url") == page.canonical, f"og:url differs from canonical: {path}"
