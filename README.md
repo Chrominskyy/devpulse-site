@@ -78,9 +78,9 @@ simulator verification, not physical-device validation.
 
 ## Availability
 
-DevPulse is being prepared for the Mac App Store and is not yet publicly
-available there. Update the availability copy and add the official App Store
-link after a public release.
+DevPulse for Mac is available on the Mac App Store worldwide. The iOS and
+iPadOS version has not passed App Review yet; update the availability copy
+once it is released.
 
 ## Third-party materials
 

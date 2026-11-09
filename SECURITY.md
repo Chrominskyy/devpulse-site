@@ -4,7 +4,7 @@
 
 This repository covers the current DevPulse website and receives reports about the DevPulse app for macOS, iOS and iPadOS. App source is maintained separately. Security fixes target the current website and the latest available app release; older app releases do not have a separate maintenance commitment.
 
-The app is currently being prepared for its first Mac App Store release. Reports about the current prerelease build are also welcome.
+The Mac app is available on the Mac App Store. The iOS and iPadOS app is not yet released; reports about its prerelease build are also welcome.
 
 ## Report a vulnerability privately
 

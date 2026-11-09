@@ -14,7 +14,7 @@ Static product site in the style of a pipeline console. Three pages (`index.html
 
 ## Content rules
 
-- Describe implemented behavior only. No App Store link, price, rating or availability claim until a release exists.
+- Describe implemented behavior only. Availability claims match the App Store: the Mac app is released; iOS and iPadOS are not. No price or rating claims.
 - Illustrations with sample data are labelled as illustrations. Screenshots are real app captures with fictional data.
 - Privacy content follows the shipping app: profile display metadata synchronizes through iCloud; credentials, authentication settings and account identifiers stay on the device.
 
