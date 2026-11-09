@@ -382,3 +382,21 @@ td { color: var(--ink-2); }
 
 @media (max-width: 520px) { .ui { white-space: normal; } td:first-child { white-space: normal; } }
 .page-head .kicker { font-size: 12.5px; margin: 0 0 16px; max-width: none; color: var(--ink-3); }
+
+/* ---------- launch ribbon ---------- */
+.ribbon {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 4px 12px;
+  padding: 9px var(--gutter); background: var(--pulse); color: var(--on-pulse);
+  font-family: var(--mono); font-size: 13px; line-height: 1.4; text-align: center; text-decoration: none;
+}
+.ribbon:hover, .ribbon:focus-visible { color: var(--on-pulse); }
+.ribbon:hover .ribbon-main { text-decoration: underline; text-underline-offset: 3px; }
+.ribbon:focus-visible { outline: 2px solid var(--on-pulse); outline-offset: -4px; }
+.ribbon b { font-weight: 700; }
+.ribbon-note {
+  font-size: 11px; letter-spacing: .06em; text-transform: uppercase;
+  padding: 2px 8px; border-radius: 999px; border: 1px solid currentColor; opacity: .9;
+}
+.ribbon-arrow { transition: transform .2s ease; }
+.ribbon:hover .ribbon-arrow { transform: translateX(3px); }
+@media (prefers-reduced-motion: reduce) { .ribbon-arrow { transition: none; } }
